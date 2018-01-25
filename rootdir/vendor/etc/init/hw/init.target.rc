@@ -213,11 +213,6 @@ service hbtp /system/vendor/bin/hbtp_daemon
     group system
     disabled
 
-service audiod /system/vendor/bin/audiod
-   class late_start
-   user system
-   group system
-
 #service usf_tester /system/vendor/bin/usf_tester
 #    user system
 #    group system inet
