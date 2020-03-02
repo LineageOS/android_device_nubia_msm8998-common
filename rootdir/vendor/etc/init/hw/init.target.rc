@@ -346,11 +346,6 @@ service cnss_diag /system/vendor/bin/cnss_diag -q -f -t HELIUM
    group system wifi inet sdcard_rw media_rw diag
    oneshot
 
-service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
-    class core
-    user root
-    oneshot
-
 service ppd /vendor/bin/mm-pp-dpps
     class late_start
     user system
@@ -417,7 +412,6 @@ service vendor.sensors.qti /vendor/bin/sensors.qti
     class core
     user system
     group system
-    disabled
     writepid /dev/cpuset/system-background/tasks
 
 service qvrd /system/bin/qvrservice
