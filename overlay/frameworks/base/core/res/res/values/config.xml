@@ -251,9 +251,6 @@
     <!-- Whether notify fingerprint client of successful cancelled authentication -->
     <!-- <bool name="config_notifyClientOnFingerprintCancelSuccess">true</bool> -->
 
-    <!-- True if camera app should be pinned via Pinner Service -->
-    <bool name="config_pinnerCameraApp">true</bool>
-
     <!-- Minimum color temperature, in Kelvin, supported by Night display. -->
     <integer name="config_nightDisplayColorTemperatureMin">1500</integer>
 
