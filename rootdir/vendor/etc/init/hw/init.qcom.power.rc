@@ -64,10 +64,8 @@ on charger
 on late-fs
     # Enable boot time fs tuning (ro like system is on sda, rw like userdata is on sde)
     write /sys/block/sda/queue/iostats 0
-    write /sys/block/sda/queue/read_ahead_kb 2048
     write /sys/block/sda/queue/nr_requests 256
     write /sys/block/sde/queue/iostats 0
-    write /sys/block/sde/queue/read_ahead_kb 2048
     write /sys/block/sde/queue/nr_requests 256
 
 on property:sys.boot_completed=1
