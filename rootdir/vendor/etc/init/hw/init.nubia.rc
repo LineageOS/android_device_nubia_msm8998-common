@@ -283,29 +283,29 @@ service vendor.dataqti /system/vendor/bin/qti
     socket qti_dpm_uds_file dgram 660 radio radio
     group radio oem_2901 diag usb inet
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.netmgrd /system/vendor/bin/netmgrd
     class main
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.rmt_storage /vendor/bin/rmt_storage
     class core
     user root
     shutdown critical
     ioprio rt 0
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.tftp_server /vendor/bin/tftp_server
    class core
    user root
-   writepid /dev/cpuset/system-background/tasks
+   task_profiles ServiceCapacityLow
 
 service adsprpcd /system/vendor/bin/adsprpcd
    class main
    user media
    group media
-   writepid /dev/cpuset/system-background/tasks
+   task_profiles ServiceCapacityLow
 
 ## imsdatadaemon starts with root and UID will be downgraded to RADIO.
 service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
@@ -313,7 +313,7 @@ service vendor.imsqmidaemon /system/vendor/bin/imsqmidaemon
     user radio
     socket ims_qmid stream 0660 system radio
     group radio log vendor_qti_diag
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 # imsdatadaemon starts with root and UID will be downgraded to RADIO.
 service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
@@ -322,7 +322,7 @@ service vendor.imsdatadaemon /system/vendor/bin/imsdatadaemon
     socket ims_datad stream 0660 system radio
     group radio wifi inet log vendor_qti_diag
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
@@ -331,10 +331,10 @@ service vendor.ims_rtp_daemon /system/vendor/bin/ims_rtp_daemon
    class main
    user radio
    group radio vendor_qti_diag audio inet log
-   writepid /dev/cpuset/system-background/tasks
+   task_profiles ServiceCapacityLow
 
 service vendor.imsrcsservice /system/vendor/bin/imsrcsd
    class main
    user radio
    group radio vendor_qti_diag inet log wakelock
-   writepid /dev/cpuset/system-background/tasks
+   task_profiles ServiceCapacityLow

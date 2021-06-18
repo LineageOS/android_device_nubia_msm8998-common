@@ -525,13 +525,13 @@ service vendor.qrtr-ns /vendor/bin/qrtr-ns -f
     user vendor_qrtr
     group vendor_qrtr
     capabilities NET_BIND_SERVICE
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     class core
     user root
     oneshot
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service qmiproxy /system/bin/qmiproxy
     class main
@@ -637,7 +637,7 @@ service cnss-daemon /system/vendor/bin/cnss-daemon -n -l
     user system
     group system inet net_admin wifi
     capabilities NET_ADMIN
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 on property:sys.shutdown.requested=*
     write /sys/kernel/shutdown_wlan/shutdown 1
@@ -669,14 +669,14 @@ service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service qcom-sh /vendor/bin/init.qcom.sh
     class late_start
     user root
     group root system radio
     oneshot
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 # Remove since is deprecated but throws AVC denial.
 # service crashdata-sh /vendor/bin/init.qcom.crashdata.sh
@@ -690,7 +690,7 @@ service qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
     group root system wakelock graphics
     disabled
     oneshot
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service qti-testscripts /system/bin/sh /product/etc/init.qcom.testscripts.sh
     class late_start
@@ -727,7 +727,7 @@ service vendor.atfwd /vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service hostapd_fst /vendor/bin/hw/hostapd -dd -g /data/vendor/wifi/hostapd/global
     class main
@@ -768,7 +768,7 @@ service charger /system/bin/charger
     group system graphics input
     capabilities SYS_BOOT
     seclabel u:r:charger:s0
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.ssr_diag /system/vendor/bin/ssr_diag
     class late_start
@@ -809,7 +809,7 @@ service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /system/vendor/etc/m
     user root
     group root
     disabled
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_little_big.conf
     class core
@@ -865,7 +865,7 @@ service time_daemon /vendor/bin/time_daemon
     class main
     user root
     group root
-    writepid /dev/cpuset/system-background/tasks
+    task_profiles ServiceCapacityLow
 
 # Set vendor-ril lib path based on Meta version
 on property:vendor.rild.libpath=*
@@ -919,5 +919,5 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     group audio camera drmrpc inet media mediadrm net_bt net_bt_admin net_bw_acct oem_2901 wakelock
     capabilities BLOCK_SUSPEND
     ioprio rt 4
-    writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
+    task_profiles ProcessCapacityHigh HighPerformance
     onrestart restart audioserver
