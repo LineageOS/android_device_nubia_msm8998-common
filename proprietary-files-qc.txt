@@ -145,9 +145,6 @@ vendor/bin/hw/android.hardware.drm@1.2-service.widevine|1aed116c6cd73ee0c89a5eec
 vendor/etc/init/android.hardware.drm@1.2-service.widevine.rc|dee5b7838ac561a2292e89fc0c4ccd1932224215
 vendor/lib64/libwvhidl.so|0466cd3b2a7b93efd23945e2637430513472ad7c
 
-# Gatekeeper
-vendor/lib64/hw/gatekeeper.msm8998.so
-
 # GPS
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
@@ -288,9 +285,6 @@ vendor/firmware/ipa_fws.mdt
 
 # IRQ balance
 vendor/bin/msm_irqbalance
-
-# Keystore
-vendor/lib64/hw/keystore.msm8998.so
 
 # Listen
 vendor/lib/hw/sound_trigger.primary.msm8998.so
