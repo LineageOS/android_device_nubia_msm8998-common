@@ -91,6 +91,10 @@ persist.vendor.camera.HAL3.enabled=1
 persist.vendor.camera.vdbea.switch=1
 vidc.enc.dcvs.extra-buff-count=2
 
+# Chipset
+ro.soc.manufacturer=Qualcomm
+ro.soc.model=MSM8998
+
 # Display
 debug.hwui.use_buffer_age=false
 debug.sf.disable_backpressure=1
