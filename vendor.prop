@@ -96,6 +96,7 @@ ro.soc.manufacturer=Qualcomm
 ro.soc.model=MSM8998
 
 # Display
+debug.renderengine.backend=threaded
 debug.hwui.use_buffer_age=false
 debug.sf.disable_backpressure=1
 debug.sf.enable_hwc_vds=1
