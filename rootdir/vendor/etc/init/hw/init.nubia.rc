@@ -57,7 +57,7 @@ on boot
     chown wifi wifi /sys/module/wlan/parameters/fwpath
 
     # Disable serial console
-    setprop init.svc.console stopped
+    stop console
 
 on post-fs-data
     #for audio driver to read
