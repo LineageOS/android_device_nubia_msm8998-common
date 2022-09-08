@@ -5,6 +5,10 @@
 # Amplifier persist files
 /persist/tas2555_cal\.bin                                                                                                                u:object_r:persist_amp_cal_file:s0
 
+# Block devices
+/dev/block/platform/soc/1da4000\.ufshc/by-name/system                                                                                    u:object_r:system_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/vendor                                                                                    u:object_r:system_block_device:s0
+
 # Charging
 /sys/devices/soc/800f000\.qcom,spmi/spmi-0/spmi0-02/800f000\.qcom,spmi:qcom,pmi8998@2:neo,battery/power_supply/neo-battery(/.*)?         u:object_r:sysfs_battery_supply:s0
 
