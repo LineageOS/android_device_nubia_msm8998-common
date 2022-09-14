@@ -226,9 +226,6 @@
         <item>lte:524288,1048576,8388608,262144,524288,4194304</item>
     </string-array>
 
-    <!-- Operating volatage for bluetooth controller. -->
-    <integer name="config_bluetooth_operating_voltage_mv">3300</integer>
-
     <!-- Set this to true to enable the platform's auto-power-save modes like doze and
          app standby.  These are not enabled by default because they require a standard
          cloud-to-device messaging service for apps to interact correctly with the modes
