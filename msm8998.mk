@@ -144,7 +144,6 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8998 \
     memtrack.msm8998 \
     libdisplayconfig \
-    libtinyxml.vendor \
     libqdMetaData.system
 
 PRODUCT_PACKAGES += \
@@ -301,8 +300,7 @@ PRODUCT_COPY_FILES += \
 
 # QMI
 PRODUCT_PACKAGES += \
-    libjson \
-    libjson.vendor
+    libjson
 
 # Ramdisk scripts
 PRODUCT_PACKAGES += \
@@ -340,7 +338,6 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.deprecated@1.0.vendor \
     android.hardware.secure_element@1.0 \
     android.hardware.secure_element@1.0.vendor \
-    CarrierConfigOverlay \
     librmnetctl
 
 # Seccomp policy
@@ -372,8 +369,7 @@ PRODUCT_BOOT_JARS += \
 # Thermal
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl \
-    android.hardware.thermal@1.0-service \
-    thermal.msm8998
+    android.hardware.thermal@1.0-service
 
 # Trust HAL
 PRODUCT_PACKAGES += \
