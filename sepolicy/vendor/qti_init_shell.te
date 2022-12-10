@@ -2,3 +2,5 @@ dontaudit qti_init_shell self:capability { dac_override dac_read_search };
 
 allow qti_init_shell mnt_vendor_file:dir { rw_dir_perms setattr };
 allow qti_init_shell sysfs:file setattr;
+allow qti_init_shell persist_file:file { read getattr open setattr };
+allow qti_init_shell persist_file:dir { read getattr open setattr search };
