@@ -9,6 +9,9 @@ type debugfs_wlan, debugfs_type, fs_type;
 type fingerprint_data_file, data_file_type, file_type, core_data_file_type;
 type sysfs_fingerprint, sysfs_type, fs_type;
 
+# IIO
+type vendor_sysfs_iio, fs_type, sysfs_type;
+
 # Touchpanel
 type sysfs_touchpanel, fs_type, sysfs_type;
 
