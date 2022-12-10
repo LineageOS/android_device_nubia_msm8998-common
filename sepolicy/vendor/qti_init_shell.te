@@ -5,3 +5,4 @@ allow qti_init_shell sysfs:file setattr;
 allow qti_init_shell persist_file:file { read getattr open setattr };
 allow qti_init_shell persist_file:dir { read getattr open setattr search };
 allow qti_init_shell vendor_system_prop:file { read getattr open };
+allow qti_init_shell usb_control_prop:file { read getattr open };
