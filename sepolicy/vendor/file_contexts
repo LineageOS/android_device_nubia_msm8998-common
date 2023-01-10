@@ -18,9 +18,6 @@
 # FRP partition
 /dev/block/bootdevice/by-name/frp                                                                                                        u:object_r:frp_block_device:s0
 
-# Haptic
-/dev/drv2605                                                                                                                             u:object_r:haptics_device:s0
-
 # IIO
 /sys/bus/iio/devices                                                                                                            u:object_r:vendor_sysfs_iio:s0
 
@@ -38,10 +35,6 @@
 
 # Shell files
 /(vendor|system/vendor)/bin/init\.qcom\.mem\.sh                                                                                          u:object_r:qti_init_shell_exec:s0
-
-# Vibrator
-/vendor/bin/hw/android\.hardware\.vibrator-service\.nubia                                                       u:object_r:hal_vibrator_default_exec:s0
-/sys/devices/virtual/timed_output/vibrator(/.*)?                                                                                         u:object_r:sysfs_vibrator:s0
 
 # Nubia HW
 /sys/nubia_hw_version(/.*)?                                                                                                              u:object_r:sysfs_nubia_hw:s0

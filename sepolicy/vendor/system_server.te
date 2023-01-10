@@ -1,5 +1,2 @@
-# Vibrator
-allow system_server sysfs_vibrator:file read;
-
 # Zygote
 allow system_server app_zygote:process getpgid;
