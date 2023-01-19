@@ -214,9 +214,6 @@ on property:sys.boot_completed=1
     # Start memory configuration
     start qcom-mem
 
-    # Set BFQ I/O scheduler
-    setprop sys.io.scheduler "bfq"
-
     # Set perfd properties
     setprop vendor.post_boot.parsed 1
 
