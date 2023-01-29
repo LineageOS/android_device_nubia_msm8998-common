@@ -178,6 +178,8 @@ ndk::ScopedAStatus Vibrator::setAmplitude(float amplitude) {
     }
 
     LOG(DEBUG) << "Setting intensity: " << intensity;
+    
+    return writeNode(VIBRATOR_TIMEOUT_PATH, intensity);
 
     if (mHasTimedOutIntensity) {
         return writeNode(VIBRATOR_INTENSITY_PATH, intensity);
@@ -270,6 +272,13 @@ ndk::ScopedAStatus Vibrator::activate(uint32_t timeoutMs) {
     std::lock_guard<std::mutex> lock{mMutex};
     if (!mIsTimedOutVibrator) {
         return ndk::ScopedAStatus::fromExceptionCode(EX_UNSUPPORTED_OPERATION);
+    }
+
+    /* We mostly get values that are 20ms and lower, but
+       that's not enough to be actually noticeable. Set it to
+       40ms if timeoutMs is less than that. */
+    if (timeoutMs < INTENSITY_MIN) {
+        timeoutMs = INTENSITY_MIN;
     }
 
     return writeNode(VIBRATOR_TIMEOUT_PATH, timeoutMs);
