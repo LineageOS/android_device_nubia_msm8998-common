@@ -187,3 +187,6 @@ persist.sys.wfd.virtual=0
 
 # Wi-Fi
 wifi.interface=wlan0
+
+# Zygote
+zygote.critical_window.minute=10
