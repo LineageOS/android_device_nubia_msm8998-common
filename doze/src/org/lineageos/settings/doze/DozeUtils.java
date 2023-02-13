@@ -32,6 +32,7 @@ import static android.provider.Settings.Secure.DOZE_ENABLED;
 
 public final class DozeUtils {
 
+    protected static final String DOZE_ENABLE = "doze_enable";
     protected static final String WAKE_ON_GESTURE_KEY = "wake_on_gesture";
     protected static final String CATEG_PROX_SENSOR = "proximity_sensor";
     protected static final String GESTURE_PICK_UP_KEY = "gesture_pick_up";
