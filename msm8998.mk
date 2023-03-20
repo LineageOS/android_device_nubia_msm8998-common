@@ -378,7 +378,7 @@ $(call inherit-product, build/target/product/verity.mk)
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator@1.1-service.nubia
+    android.hardware.vibrator-service.nubia
 
 # VR
 PRODUCT_PACKAGES += \
