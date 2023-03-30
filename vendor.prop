@@ -98,6 +98,9 @@ bluetooth.profile.sap.server.enabled?=true
 persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 vendor.qcom.bluetooth.soc=cherokee
 
+# Cabl
+ro.vendor.display.cabl=2
+
 # Camera
 persist.vendor.camera.depth.focus.cb=0
 persist.vendor.camera.HAL3.enabled=1
@@ -177,6 +180,10 @@ ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.max_virtual_display_dimension=4096
 ro.surface_flinger.protected_contents=true
+
+# Thermal
+persist.sys.lcd.backlight.max=4095
+persist.vendor.product.perf=1
 
 # Times services
 persist.vendor.delta_time.enable=true
