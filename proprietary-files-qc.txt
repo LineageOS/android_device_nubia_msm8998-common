@@ -460,5 +460,8 @@ vendor/app/TimeService/TimeService.apk
 vendor/bin/time_daemon
 vendor/lib64/libtime_genoff.so
 
+# Widevine - from NX609J - PKQ1.181021.001 factory image
+vendor/lib/mediadrm/libwvdrmengine.so|a080bdfb335d9b38f3272ff5036364c31113e431
+
 # Wi-Fi
 vendor/bin/cnss-daemon
