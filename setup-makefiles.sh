@@ -25,7 +25,7 @@ source "${HELPER}"
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
 # Warning headers and guards
-write_headers "nx563j nx595j"
+write_headers "nx563j nx595j nx609j"
 
 # The standard common blobs
 write_makefiles "${MY_DIR}/proprietary-files-qc.txt" true
