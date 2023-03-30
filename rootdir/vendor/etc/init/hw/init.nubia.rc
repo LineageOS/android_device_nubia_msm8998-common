@@ -94,14 +94,6 @@ on post-fs-data
     chmod 0775 /data/vendor/camera/arcsoft_calibration.bin
     chmod 0777 /data/vendor/camera/bokeh_depth.bin
 
-    # Fingerprint
-    mkdir /dev/fpcSocket 0770 system system
-    chmod 0777 /dev/fpcSocket
-    chown system system /sys/bus/platform/devices/1.fpc1020/irq
-    chmod 0660 /sys/bus/platform/devices/1.fpc1020/irq
-    chown system system /sys/bus/platform/devices/1.fpc1020/wakeup_enable
-    chmod 0660 /sys/bus/platform/devices/1.fpc1020/wakeup_enable
-
     # Nubia begin feature add sensors node
     chmod 0777 /persist/sensors
 
