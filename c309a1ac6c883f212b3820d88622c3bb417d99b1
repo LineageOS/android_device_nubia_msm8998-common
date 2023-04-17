@@ -16,6 +16,41 @@
       "message": "check vendor/etc/init/imsdatadaemon.rc \u0026 friends",
       "revId": "c309a1ac6c883f212b3820d88622c3bb417d99b1",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "03b48819_aa66ac97",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 24457
+      },
+      "writtenOn": "2023-04-17T12:56:37Z",
+      "side": 1,
+      "message": "@Vladimir Mikhailov:\nI verified it on nx563j/nx609j, please let me know if you pass the test too.",
+      "revId": "c309a1ac6c883f212b3820d88622c3bb417d99b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "00b2f0d7_0ddce08c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 24457
+      },
+      "writtenOn": "2023-04-17T12:56:37Z",
+      "side": 1,
+      "message": "https://review.lineageos.org/c/LineageOS/android_device_nubia_msm8998-common/+/354158\n\nIn fact, nubia itself is defined in init.target.rc\nUnfortunately, vendor/etc/init/imsdatadaemon.rc does not exist.",
+      "parentUuid": "dc46a927_730e5cd3",
+      "revId": "c309a1ac6c883f212b3820d88622c3bb417d99b1",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
