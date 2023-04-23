@@ -4,7 +4,7 @@ package {
 }
 
 cc_library_shared {
-    name: "android.hardware.sensors@1.0-impl",
+    name: "android.hardware.sensors@1.0-impl.nubia_msm8998",
     defaults: ["hidl_defaults"],
     proprietary: true,
     relative_install_path: "hw",
@@ -28,10 +28,10 @@ cc_library_shared {
 }
 
 cc_binary {
-    name: "android.hardware.sensors@1.0-service",
+    name: "android.hardware.sensors@1.0-service.nubia_msm8998",
     relative_install_path: "hw",
     vendor: true,
-    init_rc: ["android.hardware.sensors@1.0-service.rc"],
+    init_rc: ["android.hardware.sensors@1.0-service.nubia_msm8998.rc"],
     srcs: ["service.cpp"],
 
     shared_libs: [
