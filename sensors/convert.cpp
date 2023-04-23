@@ -130,7 +130,6 @@ void convertFromSensorEvent(const sensors_event_t &src, Event *dst) {
         case SensorType::LIGHT:
         case SensorType::PRESSURE:
         case SensorType::TEMPERATURE:
-        case SensorType::PROXIMITY:
         case SensorType::RELATIVE_HUMIDITY:
         case SensorType::AMBIENT_TEMPERATURE:
         case SensorType::SIGNIFICANT_MOTION:
@@ -145,6 +144,11 @@ void convertFromSensorEvent(const sensors_event_t &src, Event *dst) {
         case SensorType::HEART_BEAT:
         case SensorType::LOW_LATENCY_OFFBODY_DETECT: {
             dst->u.scalar = src.data[0];
+            break;
+        }
+
+        case SensorType::PROXIMITY: {
+            dst->u.scalar = src.data[0] <= 3 ? 0 : src.data[0];
             break;
         }
 
@@ -262,7 +266,6 @@ void convertToSensorEvent(const Event &src, sensors_event_t *dst) {
         case SensorType::LIGHT:
         case SensorType::PRESSURE:
         case SensorType::TEMPERATURE:
-        case SensorType::PROXIMITY:
         case SensorType::RELATIVE_HUMIDITY:
         case SensorType::AMBIENT_TEMPERATURE:
         case SensorType::SIGNIFICANT_MOTION:
@@ -277,6 +280,11 @@ void convertToSensorEvent(const Event &src, sensors_event_t *dst) {
         case SensorType::HEART_BEAT:
         case SensorType::LOW_LATENCY_OFFBODY_DETECT: {
             dst->data[0] = src.u.scalar;
+            break;
+        }
+
+        case SensorType::PROXIMITY: {
+            dst->data[0] = src.u.scalar <= 3 ? 0 : src.u.scalar;
             break;
         }
 
