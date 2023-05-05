@@ -254,3 +254,6 @@ service vendor.imsrcsservice /vendor/bin/imsrcsd
 
 on property:vendor.ims.DATA_DAEMON_STATUS=1
     restart vendor.ims_rtp_daemon
+
+on property:persist.sys.xtra-daemon.enabled=*
+    restart vendor.loc_launcher
