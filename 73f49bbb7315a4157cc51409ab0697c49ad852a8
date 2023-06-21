@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "146754fd_a64f30db",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 24457
+      },
+      "writtenOn": "2023-06-21T00:53:14Z",
+      "side": 1,
+      "message": "kernel side:\nhttps://review.lineageos.org/c/LineageOS/android_kernel_qcom_msm8998/+/358532",
+      "revId": "73f49bbb7315a4157cc51409ab0697c49ad852a8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
