@@ -85,6 +85,9 @@ function blob_fixup() {
         vendor/bin/thermal-engine)
             sed -i "s|/system/etc/.tp/|/vendor/etc/.tp/|g" "${2}"
             ;;
+        vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so | vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so | vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so | vendor/lib64/vendor.qti.imsrtpservice@1.0.so | vendor/lib64/vendor.qti.hardware.soter@1.0.so)
+            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
+            ;;
     esac
 }
 

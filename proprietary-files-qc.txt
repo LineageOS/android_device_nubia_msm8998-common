@@ -225,7 +225,7 @@ product/priv-app/ims/ims.apk:system_ext/priv-app/ims/ims.apk|fe11b3fe75a52e586ca
 
 # IMS - from nx616j - PKQ1.180929.001
 app/uceShimService/uceShimService.apk:system_ext/app/uceShimService/uceShimService.apk|0e749475132f37919b39cc71ad2c3381b4066bf2
-lib64/com.qualcomm.qti.imscmservice@2.0.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|122463e8c38d9fd975da6684e3df44fc992af44d
+lib64/com.qualcomm.qti.imscmservice@2.0.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so|14621aaa998b183347955bbc84501788f6d9fc83
 lib64/com.qualcomm.qti.imscmservice@2.1.so:vendor/lib64/com.qualcomm.qti.imscmservice@2.1.so|da54c6898c721e3964c2c1eb5a2d4da2a0a7d75e
 lib64/com.qualcomm.qti.uceservice@2.0.so:vendor/lib64/com.qualcomm.qti.uceservice@2.0.so|24c1d4440ecc11b3df1956fd3744a214796552a2
 lib64/lib-imsvideocodec.so:system_ext/lib64/lib-imsvideocodec.so|acd29575fb941192913436a18a8b4d6aa47bc501
@@ -236,7 +236,7 @@ lib64/libdiag_system.so:system_ext/lib64/libdiag_system.so|b9515deab73a62aca87c9
 lib64/librcc.so:system_ext/lib64/librcc.so|1b80b2960a098b50b76fb9a367689f8a080974ca
 lib64/vendor.qti.hardware.radio.ims@1.0.so:vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so|8ed844f10b01e7e3278a70ba20b0ee350338a32c
 lib64/vendor.qti.ims.callinfo@1.0.so:vendor/lib64/vendor.qti.ims.callinfo@1.0.so|7b46e19b22bf351710d6fe319529a58a0da181cd
-lib64/vendor.qti.ims.rcsconfig@1.0.so:vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|baf3bc6329a0965f9b4ef234d149e9ef634c1339
+lib64/vendor.qti.ims.rcsconfig@1.0.so:vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so|c10c03c26603cf306cbe66a342256b861a81cdf2
 lib64/vendor.qti.imsrtpservice@1.0.so:system_ext/lib64/vendor.qti.imsrtpservice@1.0.so|bce44cdceab46183699e4e3c2f073f600c550b6a
 vendor/bin/ims_rtp_daemon|cfaedc8153136c9969e8fe44a24a527c4b7ea58b
 vendor/bin/imsdatadaemon|773be26fae4d8b987b248c7fb74730b3b9dca317
@@ -256,7 +256,7 @@ vendor/lib64/lib-rtpsl.so|5e1f1a09077b670f40fae9ef2e746a4d571cf26b
 vendor/lib64/lib-siputility.so|b353e6d82370eae7b11d169659eaeb50e596fba1
 vendor/lib64/lib-uceservice.so|f1f932b5df5100c2591f45fd11e8ff6ad80ce7a8
 vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so|02687b699db4e1b5b1881990751e2cb7f514b191
-vendor/lib64/vendor.qti.imsrtpservice@1.0.so|94b925c260b16852f7dc2ff20cbd12003cfb66ec
+vendor/lib64/vendor.qti.imsrtpservice@1.0.so|ffead533d0e6b9a200c13f2e39b77e4a374b4d88
 
 # IPA
 vendor/firmware/ipa_fws.b00
@@ -369,7 +369,7 @@ product/priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk:system_ext/priv-app/qcrilmsgt
 app/QtiTelephonyService/QtiTelephonyService.apk:system_ext/app/QtiTelephonyService/QtiTelephonyService.apk|2f60399514731457ebe70e2f18bdddebd90e2e27
 app/datastatusnotification/datastatusnotification.apk:system_ext/app/datastatusnotification/datastatusnotification.apk|977cf1cd31bc103668583b4dfd426094117f4030
 lib64/vendor.qti.hardware.radio.am@1.0.so:vendor/lib64/vendor.qti.hardware.radio.am@1.0.so|5563b6b3dc9d3a7d488859482ee17ec6022290f7
-lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so:vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|01d3c7a23d9f7865f2aced988aac72d9d3a2ce2a
+lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so:vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so|adbf2885d0179cf2c324a46d07c8ae2094b5754a
 lib64/vendor.qti.hardware.radio.lpa@1.0.so:vendor/lib64/vendor.qti.hardware.radio.lpa@1.0.so|3f5c6f9b93bc1fbd4287cf3d2c92e57601da57fe
 lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so:vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0.so|77f6bf36c29032cd8e99e1b5fcda8033dbc25b23
 lib64/vendor.qti.hardware.radio.qtiradio@1.0.so:vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0.so|7dae5f8a9ad4982ce51fb6f218907e5203bb0e43
@@ -427,7 +427,7 @@ vendor/lib64/sensors.ssc.so
 
 # Soter
 app/SoterService/SoterService.apk
-lib64/vendor.qti.hardware.soter@1.0.so:vendor/lib64/vendor.qti.hardware.soter@1.0.so
+lib64/vendor.qti.hardware.soter@1.0.so:vendor/lib64/vendor.qti.hardware.soter@1.0.so|cff46e42acadae93a82eb2abce240f2a81c9bf94
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
