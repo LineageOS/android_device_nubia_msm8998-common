@@ -372,9 +372,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service
 
-# Verity
-$(call inherit-product, build/target/product/verity.mk)
-
 # VR
 PRODUCT_PACKAGES += \
     android.hardware.vr@1.0-impl \
