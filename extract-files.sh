@@ -82,6 +82,9 @@ function blob_fixup() {
                 "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBDPM_SHIM"
             done
             ;;
+        vendor/bin/pm-service)
+            grep -q libutils-v33.so "${2}" || "${PATCHELF}" --add-needed "libutils-v33.so" "${2}"
+            ;;
         vendor/bin/thermal-engine)
             sed -i "s|/system/etc/.tp/|/vendor/etc/.tp/|g" "${2}"
             ;;
