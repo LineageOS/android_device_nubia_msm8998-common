@@ -1,0 +1,7 @@
+#! /bin/sh
+
+# Start-up script for boot_signer
+
+SCRIPT_PATH=$(dirname -- "$0")
+
+java -Xmx512M -jar $SCRIPT_PATH/../../../../out/host/linux-x86/framework/boot_signer.jar "$@"
