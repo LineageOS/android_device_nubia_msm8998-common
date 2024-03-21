@@ -193,6 +193,10 @@ persist.vendor.product.perf=1
 # Times services
 persist.vendor.delta_time.enable=true
 
+# USB
+vendor.usb.controller=a800000.dwc3
+vendor.usb.device=a800000.ssusb
+
 # Widevine
 drm.service.enabled=true
 
