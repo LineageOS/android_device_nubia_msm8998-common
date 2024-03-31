@@ -60,33 +60,12 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        system_ext/etc/init/dpmd.rc)
-            sed -i "s|/system/product/bin/|/system/system_ext/bin/|g" "${2}"
-            ;;
-        system_ext/etc/permissions/com.qti.dpmframework.xml | system_ext/etc/permissions/dpmapi.xml)
-            sed -i "s|/system/product/framework/|/system/system_ext/framework/|g" "${2}"
-            ;;
-        system_ext/etc/permissions/qcrilhook.xml)
-            sed -i 's|/product/framework/qcrilhook.jar|/system_ext/framework/qcrilhook.jar|g' "${2}"
-            ;;
-        system_ext/etc/permissions/qti_libpermissions.xml)
-            sed -i 's|name=\"android.hidl.manager-V1.0-java|name=\"android.hidl.manager@1.0-java|g' "${2}"
-            ;;
         system_ext/lib64/lib-imsvideocodec.so)
-            for LIBUI_SHIM in $(grep -L "libui_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libui_shim.so" "$LIBUI_SHIM"
-            done
-            ;;
-        system_ext/lib64/libdpmframework.so)
-            for LIBDPM_SHIM in $(grep -L "libcutils_shim.so" "${2}"); do
-                "${PATCHELF}" --add-needed "libcutils_shim.so" "$LIBDPM_SHIM"
-            done
+            grep -q "libgui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libgui_shim.so" "${2}"
+            "${PATCHELF}" --replace-needed "libqdMetaData.so" "libqdMetaData.system.so" "${2}"
             ;;
         vendor/bin/thermal-engine)
             sed -i "s|/system/etc/.tp/|/vendor/etc/.tp/|g" "${2}"
-            ;;
-        vendor/lib64/vendor.qti.hardware.radio.ims@1.0.so | vendor/lib64/com.qualcomm.qti.imscmservice@2.0.so | vendor/lib64/vendor.qti.hardware.radio.atcmdfwd@1.0.so | vendor/lib64/vendor.qti.ims.rcsconfig@1.0.so | vendor/lib64/vendor.qti.imsrtpservice@1.0.so)
-            "${PATCHELF}" --replace-needed "libhidlbase.so" "libhidlbase-v32.so" "${2}"
             ;;
     esac
 }

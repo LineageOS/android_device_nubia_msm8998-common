@@ -57,7 +57,7 @@ case "$baseband" in
                     sed 's/.*AT.\(.*\)/\1/g' | cut -d \- -f 1`
             if [ ! -z $version ]; then
                 if [ "$version" \< "3.1" ]; then
-                    qcrild_status=false
+                    qcrild_status=true
                 fi
             fi
         elif [ "$modem" = "TA" ]; then
