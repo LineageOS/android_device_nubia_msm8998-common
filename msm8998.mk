@@ -104,7 +104,8 @@ PRODUCT_COPY_FILES += \
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService
+    AntHalService-Soong \
+    com.dsi.ant@1.0.vendor
 
 # Bluetooth audio
 PRODUCT_PACKAGES += \
@@ -112,7 +113,8 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
-    vendor.qti.hardware.btconfigstore@1.0.vendor
+    vendor.qti.hardware.btconfigstore@1.0.vendor \
+    vendor.qti.hardware.btconfigstore@2.0.vendor
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -123,7 +125,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4:64 \
     android.hardware.camera.provider@2.4-impl:32 \
     android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.5:64 \
+    android.hardware.camera.provider@2.6:64 \
     libdng_sdk.vendor \
     libNubiaImageAlgorithmShim \
     vendor.qti.hardware.camera.device@1.0:64
@@ -282,7 +284,6 @@ PRODUCT_PACKAGES += \
 
 # Protobuf
 PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-full-3.9.1-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
 
