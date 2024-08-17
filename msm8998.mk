@@ -109,30 +109,17 @@ PRODUCT_COPY_FILES += \
 
 # ANT+
 PRODUCT_PACKAGES += \
-    AntHalService-Soong \
-    com.dsi.ant@1.0.vendor
+    AntHalService-Soong
 
 # Bluetooth audio
 PRODUCT_PACKAGES += \
-    android.hardware.bluetooth@1.0 \
-    android.hardware.bluetooth@1.0.vendor \
     android.hardware.bluetooth.audio-impl \
-    audio.bluetooth.default \
-    vendor.qti.hardware.btconfigstore@1.0.vendor \
-    vendor.qti.hardware.btconfigstore@2.0.vendor
+    audio.bluetooth.default
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.frameworks.sensorservice@1.0 \
-    android.frameworks.sensorservice@1.0.vendor \
-    android.hardware.camera.device@3.5:64 \
     android.hardware.camera.provider@2.4-impl:32 \
-    android.hardware.camera.provider@2.4-service \
-    android.hardware.camera.provider@2.6:64 \
-    libdng_sdk.vendor \
-    libNubiaImageAlgorithmShim \
-    libpng.vendor:32 \
-    vendor.qti.hardware.camera.device@1.0:64
+    android.hardware.camera.provider@2.4-service
 
 # Configstore
 PRODUCT_PACKAGES += \
@@ -146,9 +133,7 @@ PRODUCT_COPY_FILES += \
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
-    hwcomposer.qcom \
-    libdisplayconfig \
-    libqdMetaData.system
+    hwcomposer.qcom
 
 PRODUCT_PACKAGES += \
     android.hardware.graphics.allocator@2.0-impl:64 \
@@ -161,15 +146,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     NubiaDoze
 
-# DPM
-PRODUCT_PACKAGES += \
-    libcutils_shim
-
 # DRM
 PRODUCT_PACKAGES += \
-    android.hardware.drm@1.2.vendor \
-    android.hardware.drm-service.clearkey \
-    libcrypto_shim.vendor
+    android.hardware.drm-service.clearkey
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -178,10 +157,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.1.vendor
-
-# fwk-detect
-PRODUCT_PACKAGES += \
-    libqti_vndfwk_detect.vendor
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -215,21 +190,10 @@ PRODUCT_PACKAGES += \
     android.hardware.health-service.qti \
     android.hardware.health-service.qti_recovery
 
-# HIDL
-PRODUCT_PACKAGES += \
-    android.hidl.memory@1.0.vendor \
-    libhidlmemory.vendor:64 \
-    libhidltransport \
-    libhidltransport.vendor \
-    libhwbinder \
-    libhwbinder.vendor
-
 # IMS
 PRODUCT_PACKAGES += \
     ims-ext-common \
-    ims_ext_common.xml \
-    libgui_shim \
-    libion.vendor
+    ims_ext_common.xml
 
 # IRQ
 PRODUCT_COPY_FILES += \
@@ -267,10 +231,6 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_telephony.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_telephony.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml
 
-# Netd
-PRODUCT_PACKAGES += \
-    android.system.net.netd@1.1.vendor
-
 # Neural Network
 PRODUCT_PACKAGES += \
     android.hardware.neuralnetworks@1.2.vendor
@@ -295,24 +255,13 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Power
 PRODUCT_PACKAGES += \
-    android.hardware.power@1.2.vendor \
     android.hardware.power-service-qti \
     android.hardware.power.stats@1.0-service.mock \
-    vendor.qti.hardware.perf@1.0.vendor
-
-# Protobuf
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full-3.9.1-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
 
 # QCOM
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/system_ext-privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti.xml \
     $(LOCAL_PATH)/configs/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_whitelist.xml
-
-# QMI
-PRODUCT_PACKAGES += \
-    libjson
 
 # Ramdisk scripts
 PRODUCT_PACKAGES += \
@@ -345,15 +294,7 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio@1.5.vendor \
-    android.hardware.radio.config@1.2.vendor \
-    android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor \
-    CarrierConfigOverlay \
-    libavservices_minijail.vendor \
-    libnetutils.vendor \
-    librmnetctl \
-    libsqlite.vendor:64
+    CarrierConfigOverlay
 
 PRODUCT_PACKAGES += \
     android.hardware.radio.c_shim@1.0 \
@@ -368,9 +309,7 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl.nubia_msm8998:64 \
-    android.hardware.sensors@1.0-service.nubia_msm8998 \
-    libsensorndkbridge \
-    libpower.vendor
+    android.hardware.sensors@1.0-service.nubia_msm8998
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
