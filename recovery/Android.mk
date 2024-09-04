@@ -7,10 +7,10 @@ LOCAL_CFLAGS += -DUSES_BOOTDEVICE_PATH
 endif
 
 LOCAL_C_INCLUDES := \
+    bootable/deprecated-ota/edify/include \
+    bootable/deprecated-ota/updater/include \
     bootable/recovery \
-    bootable/recovery/edify/include \
     bootable/recovery/otautil/include \
-    bootable/recovery/updater/include \
     system/libbase/include
 
 LOCAL_SRC_FILES := recovery_updater.cpp
