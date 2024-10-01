@@ -152,9 +152,6 @@ PRODUCT_VENDOR_MOVE_ENABLED := true
 # Only needed for signing
 BOARD_AVB_ENABLE := false
 
-# VNDK
-BOARD_VNDK_VERSION := current
-
 # Wifi
 BOARD_WLAN_DEVICE := qcwcn
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
