@@ -3,9 +3,6 @@ audio.sys.noisy.broadcast.delay=600
 audio.sys.offload.pstimeout.secs=3
 persist.audio.fluence.voicecomm=true
 
-# CNE
-persist.vendor.cne.feature=1
-
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
