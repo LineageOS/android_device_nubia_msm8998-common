@@ -68,10 +68,6 @@ TARGET_USES_ION := true
 # Filesystem
 TARGET_FS_CONFIG_GEN := $(PLATFORM_PATH)/config.fs
 
-# GPS
-BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := default
-BOARD_VENDOR_QCOM_LOC_PDK_FEATURE_SET := true
-
 # Manifest
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/qcom-caf/common/vendor_framework_compatibility_matrix.xml \
