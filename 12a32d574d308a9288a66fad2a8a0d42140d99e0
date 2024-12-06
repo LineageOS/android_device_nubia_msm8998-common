@@ -53,6 +53,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "94862a9e_51e89216",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 10067
+      },
+      "writtenOn": "2024-12-06T21:14:58Z",
+      "side": 1,
+      "message": "it broke Xiaomi sdm845 for sure tho?",
+      "parentUuid": "4b9fd93b_11fe7fdd",
+      "revId": "12a32d574d308a9288a66fad2a8a0d42140d99e0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5c50580b_4f1cb55a",
