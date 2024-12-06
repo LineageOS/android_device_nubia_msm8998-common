@@ -1,0 +1,67 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c24519de_ce663b59",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 24457
+      },
+      "writtenOn": "2024-12-06T13:54:22Z",
+      "side": 1,
+      "message": "BOARD_SUPER_PARTITION_SIZE :\u003d 6914310144\nBOARD_SUPER_PARTITION_SYSTEM_DEVICE_SIZE :\u003d 6442450944\nBOARD_SUPER_PARTITION_VENDOR_DEVICE_SIZE :\u003d 471859200\n\nthese need to be separated into devices.",
+      "revId": "12a32d574d308a9288a66fad2a8a0d42140d99e0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "5c50580b_4f1cb55a",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 102,
+      "author": {
+        "id": 24457
+      },
+      "writtenOn": "2024-12-06T13:54:22Z",
+      "side": 1,
+      "message": "these need to be separated into devices",
+      "range": {
+        "startLine": 100,
+        "startChar": 0,
+        "endLine": 102,
+        "endChar": 53
+      },
+      "revId": "12a32d574d308a9288a66fad2a8a0d42140d99e0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2dc4b451_75836ed6",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 106,
+      "author": {
+        "id": 24457
+      },
+      "writtenOn": "2024-12-06T13:54:22Z",
+      "side": 1,
+      "message": "same",
+      "range": {
+        "startLine": 106,
+        "startChar": 0,
+        "endLine": 106,
+        "endChar": 102
+      },
+      "revId": "12a32d574d308a9288a66fad2a8a0d42140d99e0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
