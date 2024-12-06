@@ -35,6 +35,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b9fd93b_11fe7fdd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-12-06T21:14:06Z",
+      "side": 1,
+      "message": "don\u0027t think so https://review.lineageos.org/q/topic:%2214-embed-super_empty_img%22",
+      "parentUuid": "d78c7d9d_d330ccf7",
+      "revId": "12a32d574d308a9288a66fad2a8a0d42140d99e0",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "5c50580b_4f1cb55a",
