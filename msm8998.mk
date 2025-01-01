@@ -146,7 +146,7 @@ PRODUCT_COPY_FILES += \
 # Display
 PRODUCT_PACKAGES += \
     gralloc.msm8998 \
-    hwcomposer.msm8998 \
+    hwcomposer.qcom \
     libdisplayconfig \
     libqdMetaData.system
 
