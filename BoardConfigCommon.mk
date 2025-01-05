@@ -49,6 +49,9 @@ BOARD_CUSTOM_BOOTIMG_MK := $(PLATFORM_PATH)/mkbootimg.mk
 
 TARGET_KERNEL_SOURCE := kernel/nubia/msm8998
 
+# A/B
+AB_OTA_UPDATER := false
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "qualcomm-hidl"
 
