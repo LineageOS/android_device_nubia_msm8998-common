@@ -1,12 +1,13 @@
 # Current blobs with ELF checks disabled:
+# libadsp_hvx_stub and libadsp_hvx_callback_skel depends on libmmcamera_dbg, which is shipped on all target but highly device specific
 # libcne, libwqe, lowi-server, imsdatadaemon depend on libwpa_client, which is a gnu makefile target
 # libril-qc-hal-qmi depends on android.hardware.radio.c_shim@1.{0..2} which are gnu makefile targets
 
 # ADSP
 vendor/bin/adsprpcd
 vendor/lib/libadsp_default_listener.so
-vendor/lib/libadsp_hvx_callback_skel.so
-vendor/lib/libadsp_hvx_stub.so
+vendor/lib/libadsp_hvx_callback_skel.so;DISABLE_CHECKELF
+vendor/lib/libadsp_hvx_stub.so;DISABLE_CHECKELF
 vendor/lib/libadsprpc.so
 vendor/lib/libcdsprpc.so
 vendor/lib/libfastcvadsp_stub.so
