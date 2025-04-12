@@ -275,7 +275,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     init.class_main.sh \
-    init.nubia.usb.sh \
     init.qcom.early_boot.sh \
     init.qcom.mem.sh \
     init.qcom.post_boot.sh \
@@ -284,7 +283,6 @@ PRODUCT_PACKAGES += \
     init.qti.qseecomd.sh
 
 PRODUCT_PACKAGES += \
-    init.msm.usb.configfs.rc \
     init.nubia.rc \
     init.qcom.rc \
     init.qcom.power.rc \
