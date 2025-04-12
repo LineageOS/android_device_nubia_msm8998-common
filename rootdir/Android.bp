@@ -20,13 +20,6 @@ prebuilt_etc {
 }
 
 prebuilt_etc {
-    name: "init.msm.usb.configfs.rc",
-    src: "vendor/etc/init/hw/init.msm.usb.configfs.rc",
-    sub_dir: "init/hw",
-    vendor: true,
-}
-
-prebuilt_etc {
     name: "init.nubia.rc",
     src: "vendor/etc/init/hw/init.nubia.rc",
     sub_dir: "init/hw",
@@ -66,12 +59,6 @@ prebuilt_etc {
 sh_binary {
     name: "init.class_main.sh",
     src: "vendor/bin/init.class_main.sh",
-    vendor: true,
-}
-
-sh_binary {
-    name: "init.nubia.usb.sh",
-    src: "vendor/bin/init.nubia.usb.sh",
     vendor: true,
 }
 
