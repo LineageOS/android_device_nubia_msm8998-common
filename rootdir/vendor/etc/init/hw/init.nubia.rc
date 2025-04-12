@@ -176,14 +176,125 @@ on property:sys.boot_completed=1
     # Enable ZRAM on boot_completed
     swapon_all /vendor/etc/fstab.qcom
 
-service adsprpcd /system/vendor/bin/adsprpcd
-   class main
-   user media
-   group media
-   task_profiles ServiceCapacityLow
+service vendor.adsprpcd /system/vendor/bin/adsprpcd
+    class main
+    user media
+    group media
+    task_profiles ServiceCapacityLow
 
 on property:persist.sys.xtra-daemon.enabled=*
     restart vendor.loc_launcher
 
 on property:init.svc.vendor.qcrild=stopped
     stop vendor.radio-config-1-1-wrapper
+
+service vendor.cnd /system/vendor/bin/cnd
+    override
+    class main
+    user system
+    group system wifi inet radio wakelock net_admin
+    task_profiles ServiceCapacityLow
+
+service vendor.dataadpl /system/vendor/bin/adpl
+    override
+    class main
+    user radio
+    socket adpl_cmd_uds_file dgram 660 radio radio
+    group radio oem_2901 diag usb inet
+    task_profiles ServiceCapacityLow
+    disabled
+
+service vendor.dataqti /system/vendor/bin/qti
+    override
+    class main
+    user radio
+    socket qti_dpm_uds_file dgram 660 radio radio
+    group radio oem_2901 diag usb inet
+    task_profiles ServiceCapacityLow
+    disabled
+
+service dpmQmiMgr /system/vendor/bin/dpmQmiMgr
+    override
+    interface com.qualcomm.qti.dpm.api@1.0::IdpmQmi dpmQmiService
+    class main
+    user system
+    group system
+    task_profiles ServiceCapacityLow
+    disabled
+
+service vendor.ims_rtp_daemon /vendor/bin/ims_rtp_daemon
+    override
+    class main
+    user system
+    group radio vendor_qti_diag inet log
+    task_profiles ServiceCapacityLow
+
+service vendor.imsdatadaemon /vendor/bin/imsdatadaemon
+    override
+    class main
+    user radio
+    socket ims_datad stream 0660 system radio
+    group radio wifi inet vendor_qti_diag log
+    task_profiles ServiceCapacityLow
+    disabled
+
+service vendor.imsqmidaemon /vendor/bin/imsqmidaemon
+    override
+    class main
+    user radio
+    socket ims_qmid stream 0660 system radio
+    group radio vendor_qti_diag log
+    task_profiles ServiceCapacityLow
+
+service vendor.imsrcsservice /vendor/bin/imsrcsd
+    override
+    class main
+    user radio
+    group radio vendor_qti_diag log inet wakelock
+    task_profiles ServiceCapacityLow
+
+service vendor.netmgrd /system/vendor/bin/netmgrd
+    override
+    class main
+    task_profiles ServiceCapacityLow
+
+service vendor.qcrild /vendor/bin/hw/qcrild
+    override
+    class main
+    user radio
+    disabled
+    group radio cache inet misc audio log readproc wakelock oem_2901
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    task_profiles ServiceCapacityLow
+
+service vendor.qcrild2 /vendor/bin/hw/qcrild -c 2
+    override
+    class main
+    user radio
+    disabled
+    group radio cache inet misc audio log readproc wakelock oem_2901
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    task_profiles ServiceCapacityLow
+
+service vendor.qcrild3 /vendor/bin/hw/qcrild -c 3
+    override
+    class main
+    user radio
+    disabled
+    group radio cache inet misc audio log readproc wakelock oem_2901
+    capabilities BLOCK_SUSPEND NET_ADMIN NET_RAW
+    task_profiles ServiceCapacityLow
+
+service vendor.rmt_storage /vendor/bin/rmt_storage
+    override
+    class core
+    user root
+    shutdown critical
+    ioprio rt 0
+    task_profiles ServiceCapacityLow
+
+service vendor.tftp_server /vendor/bin/tftp_server
+    override
+    class core
+    user root
+    task_profiles ServiceCapacityLow

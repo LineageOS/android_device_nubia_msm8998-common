@@ -107,7 +107,7 @@ on boot
     setprop vendor.usb.controller ${sys.usb.controller}
     enable vendor.qcom-usb-sh
 
-service vendor.qcom-usb-sh /vendor/bin/init.nubia.usb.sh
+service vendor.qcom-usb-sh /vendor/bin/init.qcom.usb.sh
     class core
     user root
     oneshot
